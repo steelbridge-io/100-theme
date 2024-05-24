@@ -1,0 +1,174 @@
+/* Give SCSS
+----------------------------------------------------- */
+
+/* Give Form Styles */
+#general-section {
+  font-family: 'Merriweather',serif;
+  font-weight: 300;
+  line-height: 1.85;
+}
+.give_forms {
+  margin-top: $marginTopx3;
+}
+
+/*#give-form-23148-content {
+  .summary {
+	background-color: $white;
+  }
+}*/
+.give-wrap .give-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  order: 2;
+  padding: 1.5rem;
+  justify-content: space-between;
+  height: 300px;
+}
+.bottom-btn button {
+  margin: 0 auto;
+  display: block;
+  width: 60%;
+}
+/*.give_forms-template-default.postid-23148 {
+  background-image: url("https://100blackmenba.org/wp-content/uploads/2020/01/100-Gala-2019-1429-scaled.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+  background-size: cover;
+}*/
+
+#give-recurring-form .form-row-two-thirds, form.give-form .form-row-two-thirds, form[id*=give-form] .form-row-two-thirds {
+  div {
+	width: 100%;
+  }
+}
+
+#give_purchase_form_wrap {
+  .give-fl-wrap.give-fl-wrap-input,
+  .give-fl-wrap.give-fl-wrap-textarea {
+	width: 100%;
+  }
+}
+[id*=give-form] div.summary {
+  width: 100% !important;
+  float: none !important;
+}
+
+.give-featured-image {
+  margin: 1.618em auto;
+}
+
+.give-btn {
+  background: $black;
+  border: 1px solid $black ;
+  color: $white;
+  padding: 8px 10px;
+  cursor: pointer;
+  line-height: 1.2em;
+  font-size: 1em;
+  font-family: 'Lato', Sans-Serif;
+}
+
+.give-btn:hover {
+  background: $gray !important;
+  border: 1px solid $gray !important;
+}
+
+form[id*=give-form] .give-donation-amount {
+
+  .give-currency-symbol {
+	background-color: $white !important;
+	border-top: 1px solid $black !important;
+	border-bottom: 1px solid $black !important;
+	color: $black !important;
+	margin: 0;
+	padding: 0 12px;
+	height: 80px !important;
+	line-height: 70px !important;
+	font-size: 18px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+  }
+
+  #give-amount {
+	height: 80px !important;
+	color: $black  !important;
+	font-size: 24px !important;
+	border-top: 1px solid $black  !important;
+	border-bottom: 1px solid $black  !important;
+	text-align: center;
+	background-color: $white !important;
+	color: $black !important;
+	border-radius: 0 !important;
+	margin: 2px !important;
+  }
+
+  #give-amount-text {
+	height: 80px !important;
+	line-height: 70px !important;
+  }
+
+}
+
+[id*=give-form] .give-recurring-donors-choice label,
+.give-recurring-donors-choice-period,
+.give-payment-mode-label,
+.give-gateway-option,
+#give_checkout_user_info,
+#give-create-account-wrap {
+  font-family: 'Lato', Sans-Serif !important;
+}
+
+#give_cc_fields {
+  font-family: 'Lato', Sans-Serif !important;
+}
+
+#give-recurring-form .form-row label,
+form.give-form .form-row label,
+form[id*=give-form] .form-row label {
+  font-family: 'Lato', Sans-Serif !important;
+}
+
+.give-currency-position-before {
+  text-align: center;
+  font-size: 25px !important;
+  padding-top: 5px !important;
+  min-height: 55px;
+  min-width: 50px !important;
+  border-radius: 0px !important;
+  margin: 2px !important;
+
+}
+
+#primary {
+  .give-main.site-main.site-inner {
+	margin-top: $marginTopx3 ;
+  }
+}
+
+.give {
+  .give-wrap {
+	width: 60%;
+	margin: 0 auto;
+  }
+}
+
+#give-donation-level-button-wrap li button {
+  min-width: auto !important;
+  border: 1px solid #2F56A6 !important;
+  background-color: $blue !important;
+  color: $white !important;
+  font-size: 20px !important;
+  transition: 0.2s;
+}
+
+#give-donation-level-button-wrap li button:hover {
+  border: 1px solid $black !important;
+  background-color: $white !important;
+  color: $black !important;
+  transition: 0.2s;
+}

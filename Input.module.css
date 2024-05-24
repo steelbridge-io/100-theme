@@ -1,0 +1,11 @@
+input.input {
+  border: 1px solid rgb(221, 221, 221);
+  margin-inline-end: 0.5em;
+  block-size: 2.5rem;
+  min-inline-size: 10.25rem;
+}
+input.input::placeholder {
+  color: rgb(157, 157, 157);
+}
+
+/*# sourceMappingURL=Input.module.css.map */

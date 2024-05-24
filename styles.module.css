@@ -1,0 +1,63 @@
+.dateField :global .react-datepicker-wrapper {
+  width: 100%;
+}
+.dateField :global .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+}
+.dateField :global .react-datepicker__day--selected, .dateField :global .react-datepicker__day--selected:hover {
+  background-color: var(--givewp-primary-color);
+}
+.dateField :global .react-datepicker__day--keyboard-selected {
+  background-color: var(--givewp-grey-100);
+}
+.dateField :global .react-datepicker__day--keyboard-selected:hover {
+  background-color: var(--givewp-primary-color);
+}
+
+.multiSelectField :global .givewp-fields-multiSelect__control {
+  border-color: rgb(102, 102, 102);
+  box-shadow: none;
+}
+.multiSelectField :global .givewp-fields-multiSelect__control:hover {
+  border-color: var(--givewp-primary-color);
+}
+.multiSelectField :global .givewp-fields-multiSelect__multi-value {
+  align-items: center;
+  gap: var(--givewp-spacing-2);
+  background: var(--givewp-grey-25);
+  padding: var(--givewp-spacing-2);
+  color: var(--givewp-grey-900);
+}
+.multiSelectField :global .givewp-fields-multiSelect__multi-value__label {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 500;
+  padding: 0;
+}
+.multiSelectField :global .givewp-fields-multiSelect__multi-value__remove {
+  background: none;
+  border: 0;
+  color: currentColor;
+  padding: 0;
+}
+.multiSelectField :global .givewp-fields-multiSelect__multi-value__remove svg {
+  width: 1rem;
+  height: 1rem;
+}
+.multiSelectField :global .givewp-fields-multiSelect__indicator {
+  color: rgb(102, 102, 102);
+}
+.multiSelectField :global .givewp-fields-multiSelect__indicator:hover {
+  color: var(--givewp-primary-color);
+  cursor: pointer;
+}
+.multiSelectField :global .givewp-fields-multiSelect__indicator-separator {
+  background-color: rgb(102, 102, 102);
+}
+.multiSelectField :global .givewp-fields-multiSelect__option--is-focused {
+  background-color: var(--givewp-grey-25);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,105 @@
+/* Site Footer
+----------------------------------------------------------------------------- */
+
+.site-footer.bg-dark {
+  background-color: $blue !important;
+}
+.site-footer {
+  .wrap p {
+	color: $white;
+  }
+    padding: $spacer 1.618em;
+    p {
+        margin-bottom: 0;
+    }
+    ul {
+        @include list-unstyled;
+    }
+    a {
+        color: $white;
+    }
+    &.text-muted {
+        a {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    &.bg-primary {
+        a {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #genesis-footer-widgets {
+	.wrap.container-fluid {
+	  width: 90%;
+	}
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .wellington-sig {
+	display: initial;
+	.text-right {
+	  text-align: center !important;
+	}
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+	.wellington-sig {
+		display: initial;
+		.text-right {
+			text-align: center !important;
+		}
+	}
+	#bs-example-navbar-collapse-1 {
+		margin: 0 auto;
+
+		#menu-secondary {
+			#menu-item-22821 {
+				padding-right: 5px;
+			}
+			li {
+				display: flex;
+				justify-content: center;
+				padding: 0;
+				margin: 0;
+				a.nav-link {
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}

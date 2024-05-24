@@ -1,0 +1,37 @@
+/*
+Custom CSS
+ */
+
+.give-btn.give-btn-fullForm {
+	display: none !important;
+}
+
+#gform_wrapper_2 .gfield_label {
+	color: #ffffff;
+}
+
+#gform_wrapper_2 .gform-field-label.gform-field-label--type-sub {
+	color: #ffffff;
+}
+
+#gfield_description_2_7 {
+	color: #ffffff;
+}
+
+.page-id-28056 .site-container,
+.page-id-28056 .site-container .site-inner,
+.page-id-28056 #donate-btns {
+	background-color: transparent !important;
+}
+
+#donation-template-cont {
+	margin-top: 8em;
+}
+
+#general-section.card {
+	background-color: transparent;
+}
+
+#general-section .btn-primary {
+	height: auto !important;
+}

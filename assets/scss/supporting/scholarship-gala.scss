@@ -1,0 +1,131 @@
+/*** Scholarship Gala */
+
+.page-id-28056 {
+
+	h1, h2, h3, p {
+		color: #E6EBEF;
+	}
+	.site-container {
+		background-color: #100852;
+		.site-inner {
+			background-color: #100852;
+		}
+	}
+
+	.give-recurring-donors-choice {
+		label {
+			color: #E6EBEF;
+		}
+	}
+
+	.give-btn.give-btn-reveal {
+		border: 1px solid #E6EBEF !important;
+	}
+
+	.scholarship-gala-cont {
+		.gb-layout-column-wrap {
+			display: flex !important;
+			align-items: center !important;
+		}
+	}
+
+	#donate-btns {
+		background-color: #100852;
+		button {
+			background-color: #000000;
+			border-color: #000000;
+		}
+		.donate-btn {
+			background-color: #000000;
+			border: 1px solid #E6EBEF;
+		}
+
+
+
+	}
+
+	.gala-2022-img.img-fluid {
+		width: 70%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.give-form-title {
+		color: #000 !important;
+	}
+
+	.gala-btn {
+		background: transparent !important;
+		border: none !important;
+		padding: 0;
+	}
+	.gala-btn:focus {
+		outline: none !important;
+	}
+
+	h3.h3-medium {
+		font-size: 3rem;
+	}
+}
+
+/** max width */
+@media (max-width: 1399.98px) { }
+
+@media (max-width: 1199.98px) { }
+
+@media (max-width: 991.98px) {
+
+	.page-id-28056 {
+		.scholarship-gala-cont {
+			.gb-layout-column-wrap {
+				display: initial !important;
+			}
+		}
+
+		.scholarship-gala-cont {
+			.gb-layout-column-wrap {
+				.gb-block-layout-column-inner {
+					width: 95%;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		h3.h3-medium {
+				font-size: 4rem;
+		}
+
+	}
+
+}
+
+@media (max-width: 767.98px) {
+	.page-id-28056 {
+		h3.h3-medium {
+			font-size: 3rem;
+		}
+	}
+}
+
+@media (max-width: 575.98px) {
+	.page-id-28056 {
+		h3.h3-medium {
+			font-size: 2rem;
+		}
+	}
+}
+
+
+/** min width */
+@media (min-width: 576px) { }
+
+@media (min-width: 768px) { }
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) { }
+
+@media (min-width: 1400px) { }
+
+
+

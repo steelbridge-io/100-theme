@@ -1,0 +1,238 @@
+/* Members page and members archive
+----------------------------------------------- */
+
+.single-member_cpt {
+	.site-container {
+		padding-top: 3.66em;
+	}
+	.fab.fa-linkedin-in {
+		font-size: 1.6em;
+	}
+}
+
+
+
+.members-officers-board {
+  .site-container {
+	.site-inner {
+	  .wrap {
+		.row {
+		  #genesis-content {
+			article {
+			  .entry-content {
+				h2 {
+				  text-align: center !important;
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+.members-search-results {
+  div button {
+	a {
+	  color: $white;
+	  text-decoration: none;
+	}
+  }
+}
+
+/* Members Archive */
+
+#tax-member-category {
+  h1 {
+	color: $blue;
+  }
+}
+
+#member-archive {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  .row {
+    .member-column {
+      .card {
+        border: none;
+      }
+    }
+  }
+
+}
+
+.tax-member-category {
+  .site-container {
+    .site-inner {
+      .wrap {
+        .content-sidebar-wrap {
+          .content {
+            .archive-description {
+              h1.archive-title {
+                text-align: left;
+                margin: 1.618em 1.618em;
+                font-size: 3.5rem;
+				color: $black;
+				text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.member_cpt-template-default {
+  .entry-header {
+    margin-top: 2.618em;
+    text-align: center;
+    .entry-meta {
+      display: none;
+    }
+  }
+}
+
+#intro-text-members {
+  h2 {
+	color: $blue;
+	font-size: 2.8rem;
+  }
+  ul {
+	padding-left: 0;
+	columns: 2;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 2em;
+	-moz-column-gap: 2em;
+	column-gap: 2em;
+  }
+  ul li {
+	list-style: none;
+	padding: 1.618em 0;
+  }
+}
+
+#members-search-field {
+  input {
+	margin: 0 1em;
+  }
+}
+
+/* Do not show images for members archive from content */
+.no-show-content-image img {
+  display: none;
+}
+
+/*** MAKES TAG CLOUD GO AWAY!!! SO SAD TAG CLOUD ****/
+.members-tag-cloud-cont {
+  DISPLAY: NONE;
+}
+
+.member-cpt-header-archive.thb-page-header h1 {
+  font-size: 35px;
+}
+
+.style1-class .member_cpt.type-member_cpt .post-content h4.no-display-archive {
+  display: none;
+}
+
+.members-cpt {
+  padding-top: 160px !important;
+}
+.members-cpt > .row > .columns > .member-category-100-blackmen-member.member-tag-100-black-men-of-the-bay-area-members > .post-title h4 {
+  text-align: center;
+}
+.members-cpt > .row > .columns > .member-category-100-blackmen-member.member-tag-100-black-men-of-the-bay-area-members > .post-content h4 {
+  font-size: 1.3rem;
+}
+.member_cpt.type-member_cpt .post-title h4.entry-title {
+  text-align: center;
+}
+.members-tag-cloud-cont {
+  padding-top: 1em;
+}
+.members-tag-cloud {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #D1D2D4;
+  padding: 4px;
+  font-size: 8px !important;
+  text-align: left;
+}
+.members-tag-cloud a {
+  font-size: 13px !important;
+}
+.members-tag-cloud .tag-cloud-link {
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.members-tag-cloud .tag-cloud-link:hover,
+.members-tag-cloud .tag-cloud-link:active {
+  background-color: #777777;
+}
+
+
+/* Member Page */
+
+
+.member-linkedin {
+  margin: 1em auto;
+  text-align: center;
+}
+p.member-desc{
+  margin: 1em auto;
+  text-align: center;
+}
+.member-figure.post-gallery.parallax {
+  min-height: 0.5vh;
+  padding: 30px 0 !important;
+}
+.member-figure > header > .row > .columns > h1.entry-title {
+  margin-bottom: 0 !important;
+}
+.member-figure > header > .row > .columns > .post-category {
+  display: none;
+}
+.post-detail.style1-detail .post-content img.aligncenter {
+  width: calc(50% + 0vw) !important;
+  margin: 0 auto !important;
+}
+
+.member_cpt.type-member_cpt .row .columns .post-content h4 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #505050;
+}
+.member_cpt.type-member_cpt .row .columns .post-content p,
+.member_cpt.type-member_cpt .row .columns .post-content h4 {
+  margin-bottom: .5rem;
+}
+.member_cpt.type-member_cpt .row .columns .post-content img {
+  padding-bottom: 1.618em;
+}
+
+@media (max-width: 781px) and (min-width: 600px) {
+  .members-officers-board {
+	.wp-block-column:not(:only-child) {
+	  flex-basis: calc(100% - 1em) !important;
+	  flex-grow: 0;
+	}
+	.wp-block-column:nth-child(2n) {
+	  margin-left: 0;
+	  margin-right: 0;
+	}
+	.wp-block-columns {
+	  display: initial;
+	}
+  }
+}

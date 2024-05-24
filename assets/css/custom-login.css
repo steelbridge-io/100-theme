@@ -1,0 +1,86 @@
+/**
+	Custom CSS for Login Page
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+	font-family: 'Merriweather', serif;
+}
+
+.login h1 a {
+	background-image: url('../../images/members-logo.png') !important;
+	background-image: none,url('../../images/members-logo.png') !important;
+	background-size: 150px;
+	height: 150px;
+	width: 150px;
+	position: relative;
+}
+
+.login #nav a {
+	font-weight: 600;
+}
+
+.login #backtoblog a {
+	font-weight: 600;
+	position: relative;
+}
+
+#loginform .submit .button-primary {
+	background-color: #2F56A6 !important;
+	border-radius: 0 !important;
+	color: #f5f5f5 !important;
+}
+
+.login .message,
+.login .notice {
+	border-left: 4px solid #2f56a6;
+	background: #f5f5f5;
+	position: relative;
+}
+
+.login form {
+	background-color: #f5f5f5;
+	position: relative;
+	z-index: 1;
+}
+
+#nav {
+	position: relative;
+}
+
+.privacy-policy-page-link a {
+	color: #2f56a6;
+	position: relative;
+}
+
+.wp-core-ui .button,
+.wp-core-ui .button-secondary {
+	color: #2f56a6;
+}
+
+body {
+	background-color: #f5f5f5;
+	position: relative;
+	overflow: hidden;
+}
+
+body::before, body::after {
+	content: "";
+	position: absolute;
+	width: 210vw;
+	height: 100vh;
+	transform: skewY(-13deg);
+	transform-origin: left bottom;
+}
+
+body::before {
+	background: #F8BD26;
+	-webkit-mask-image: linear-gradient(to left top, transparent 20%, #F8BD26 80%);
+	mask-image: linear-gradient(to left top, transparent 20%, #F8BD26 80%);
+}
+
+body::after {
+	bottom: 8px;
+	box-shadow: 0px 8px 15px rgba(0,0,0,.7);
+}

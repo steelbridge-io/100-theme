@@ -1,0 +1,225 @@
+/** SCSS Donations Template
+================================= */
+
+
+/** New donations page May 2024 by Chris Parsons /donate **/
+
+
+/** /end new donations page /donate **/
+
+.donations-modal-body {
+	h2.give-form-title {
+		font-size: clamp(1.2rem, -0.8750rem + 8.3333vw, 3rem);
+	}
+  .give-form-wrap {
+	.give-form-content-wrap {
+	  display: none;
+	  img {
+		display: none;
+	  }
+	}
+  }
+}
+#general-section {
+  .row {
+	align-items: center;
+  }
+  button {
+	background-color: $blue;
+	border-color: $blue;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+  }
+  &.card {
+	border: none;
+  }
+}
+#donation-fund-desc {
+  &.card {
+	border: none;
+  }
+}
+#donate-btns {
+	margin-bottom: 2.618em !important;
+	margin-left: auto;
+	margin-right: auto;
+  justify-content: center;
+	max-width: 1137px;
+  .donate-btn {
+		margin: .5em;
+	  display: flex;
+	  &:hover{
+		  opacity: 0.8;
+	  }
+  }
+  .btn {
+	padding: .5em .5em;
+  }
+	button {
+		width: 100%;
+		background-color: $blue;
+		border-color: $blue;
+		flex: 1;
+	}
+}
+
+.modal-content.donations-modal {
+  background-color: $white;
+}
+.modal-body.donations-modal-body {
+  color: $black;
+}
+.btn-primary.btn-donations {
+  background-color: $blue;
+  border-radius: 0;
+}
+
+.page-template-donations-template {
+  .site-container {
+		.site-inner {
+		  padding: 0 0 0 0;
+		}
+  }
+}
+
+.donations-template-class {
+	background-color: $background-color-smoke;
+	#donation-fund-desc {
+		background-color: $background-color-smoke;
+	}
+	.site-container {
+		.site-inner {
+			padding: 0 0 0 0;
+			width: 890px;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+
+/** SCSS for Donations Page
+------------------------------------------ */
+@media (min-width: 1200px) {
+  .narrow-donation {
+	.entry-content {
+	  #give-form-23152-wrap,
+	  .give-form-content-wrap,
+	  .give-form-content-wrap p,
+	  .give-form {
+		width: 70%;
+		margin: 0 auto;
+
+		h2 {
+		  width: 100%;
+		  margin-bottom: 1em;
+		}
+	  }
+
+	  .give-wrap {
+		width: 50%;
+		margin: 0 auto;
+	  }
+	}
+
+	.give-form-content-wrap p {
+	  width: 100% !important;
+	}
+  }
+}
+
+.give-wrap {
+  .give-card__body {
+	padding: 1.5rem .5rem;
+	min-height: 333px;
+
+	h3 {
+	  width: 100%;
+	}
+
+	p {
+	  width: 100%;
+	}
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+	max-width: 800px;
+  }
+}
+
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+
+@media (max-width: 1399.98px) {}
+@media (max-width: 1199.98px) {
+	.donations-template-class {
+		.site-container {
+			.site-inner {
+				width: 78%;
+				max-width: 893px;
+			}
+		}
+	}
+}
+@media (max-width: 991.98px) {
+	#give-form-25720-wrap {
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+	.donations-template-class {
+		h1 {
+			margin-left: 10px;
+			font-size: 4rem;
+		}
+	}
+	.donations-template-class {
+		.site-container {
+			.site-inner {
+				width: 82%;
+				max-width: 776px;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 767.98px) {
+
+	#donate-btns {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+  #general-section {
+		button {
+		  margin-top: 1.618em;
+		}
+  }
+}
+
+@media (max-width: 575.98px) {
+
+	h2.mobile-edge-margin {
+		font-size: 2.4rem;
+	}
+
+	.donations-template-class {
+		h1 {
+			font-size: 3rem;
+		}
+
+		.site-container {
+			.site-inner {
+				width: 100%;
+			}
+
+		}
+	}
+}
+

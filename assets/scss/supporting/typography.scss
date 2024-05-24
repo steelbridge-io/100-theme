@@ -1,0 +1,72 @@
+.lead-small {
+	font-size: 0.8rem;
+}
+body {
+  font-size: $body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.h3-large {
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.lead-large {
+  font-size: 1.2rem;
+}
+
+.h1, .site-header .site-title, h1 {
+  font-size: 4.5rem;
+}
+
+.h2, h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+/*Single pages Modifications*/
+.h2-line {
+  font-size: 7vh;
+  color: #2F56A6;
+  border-bottom: 2px solid #F8BD26;
+  display: flex;
+}

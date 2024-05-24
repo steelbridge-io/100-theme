@@ -1,0 +1,78 @@
+.formModal :global .givewp-modal-dialog {
+  max-width: 37.5rem;
+}
+.formModal :global .givewp-modal-dialog .givewp-modal-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.formModal :global .givewp-modal-dialog .givewp-modal-close {
+  translateY: 4.5px;
+}
+.formModal :global .givewp-event-tickets__form label {
+  color: var(--givewp-grey-700);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.formModal :global .givewp-event-tickets__form input, .formModal :global .givewp-event-tickets__form textarea {
+  border-color: var(--givewp-grey-400);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: var(--givewp-spacing-3) var(--givewp-spacing-4);
+}
+.formModal :global .givewp-event-tickets__form input::placeholder, .formModal :global .givewp-event-tickets__form textarea::placeholder {
+  color: var(--givewp-grey-400);
+}
+.formModal :global .givewp-event-tickets__form input[aria-invalid=true], .formModal :global .givewp-event-tickets__form textarea[aria-invalid=true] {
+  border-color: var(--givewp-red-500);
+  outline-color: var(--givewp-red-500);
+}
+.formModal :global .givewp-event-tickets__form span {
+  color: var(--givewp-grey-400);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.formModal :global .givewp-event-tickets__form span strong {
+  color: var(--givewp-grey-500);
+  font-weight: 600;
+}
+.formModal :global .givewp-event-tickets__form button[type=submit].button {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: var(--givewp-spacing-3) var(--givewp-spacing-5);
+  width: 100%;
+}
+.formModal :global .givewp-event-tickets__form-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--givewp-spacing-1);
+  margin-bottom: var(--givewp-spacing-6);
+}
+.formModal :global .givewp-event-tickets__form-row--half {
+  flex-direction: row;
+  gap: var(--givewp-spacing-6);
+}
+.formModal :global .givewp-event-tickets__form-column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--givewp-spacing-1);
+}
+.formModal :global .givewp-event-tickets__form-errors {
+  list-style: disc;
+  margin-bottom: var(--givewp-spacing-6);
+  margin-top: 0;
+  padding-left: var(--givewp-spacing-4);
+}
+.formModal :global .givewp-event-tickets__form-errors li {
+  color: var(--givewp-red-500);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/*# sourceMappingURL=FormModal.module.css.map */

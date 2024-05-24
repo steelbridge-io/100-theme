@@ -1,0 +1,161 @@
+/*!
+ * Theme Name: 100 Black Men Bay Area
+ * Author: Wellington Studio
+ * Author URI: https://wellington-studio.com
+ * Description: Bootstrap-powered Genesis child theme.
+ * Version: 1.0.0
+ * License: GPL-2.0
+ * License URI: http://www.opensource.org/licenses/gpl-license.php
+ * Tags: two-columns, three-columns, left-sidebar, right-sidebar, accessibility-ready, custom-logo, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+ * Text Domain: 100-black-men-ba
+ * Domain Path: /languages
+ * Template: genesis
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Merriweather:wght@300;400&family=Playfair+Display&display=swap');
+
+// Bootstrap Core Variable Override
+@import "supporting/variables-bootstrap-core-override";
+
+// Import Bootstrap Core
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Bootstrap Genesis Theme Variables
+ @import "supporting/variables-bootstrap-genesis";
+
+// Screen Reader Classes
+@import "supporting/screen-reader-text";
+
+// Long nonbreaking path name support
+@import "supporting/long-nonbreaking-path-name-support";
+
+// Skip to Main Content - Accessibility Link
+@import "supporting/skip-to-main-content";
+
+// Comments
+@import "supporting/comments";
+
+// Images
+@import "supporting/wordpress-images";
+
+// Table
+@import "supporting/table";
+
+// Widgets
+@import "supporting/widgets";
+
+// Plugins
+@import "supporting/plugin";
+
+// Pagination
+@import "supporting/pagination";
+
+@import "supporting/gallery";
+
+// Navigation
+@import "supporting/nav";
+
+// Header
+@import "supporting/header";
+
+// Jumbotron
+@import "supporting/jumbotron";
+
+// Site Inner
+@import "supporting/site-inner";
+
+// Archive/Blog
+@import "supporting/archive";
+
+// Single Post/Page
+@import "supporting/single";
+
+// Sidebar
+@import "supporting/sidebar";
+
+// Footer Widgets
+@import "supporting/footer-widgets";
+
+// Site Footer
+@import "supporting/footer";
+
+// Custom
+@import "supporting/front-page";
+
+// Slider
+@import "supporting/slider";
+
+// Buttons
+@import "supporting/buttons";
+
+// Members
+@import "supporting/members";
+
+// Forms
+@import "supporting/forms";
+
+// Gutenberg
+@import "supporting/gutenberg";
+
+// Template Modifications
+@import "supporting/template-modifications";
+
+// Side Nav
+@import "supporting/side-nav";
+
+// About Us Template
+@import "supporting/about-us-template";
+
+// Economic Empowerment
+@import "supporting/economic-empowerement";
+
+// Colors
+@import "supporting/colors";
+
+// Default Template SCSS
+@import "supporting/template-default";
+
+// Modal
+@import "supporting/modal";
+
+// Margins Paddings
+@import "supporting/margins-paddings";
+
+// Search
+@import "supporting/search";
+
+//Give
+@import "supporting/give";
+
+// Blocks
+@import "supporting/blocks";
+
+// Team CSS added first via customizer
+@import "supporting/teams";
+
+// Globals
+@import "supporting/globals";
+
+// Customizer CSS
+@import "supporting/customizer";
+
+// Gala Button
+@import "supporting/gala-button";
+
+// Donations Template
+@import "supporting/donations";
+
+// Typography
+@import "supporting/typography";
+
+// Helpers
+@import "supporting/helpers";
+
+// Pages
+@import "supporting/pages";
+
+// Scholarship Gala
+@import "supporting/scholarship-gala";
+
+// Campaign Template
+@import "supporting/template-campaign";

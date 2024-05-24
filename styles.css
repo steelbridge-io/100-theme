@@ -1,0 +1,96 @@
+.givewp-conditional-logic__open-popover-button {
+  justify-content: center;
+  width: 100%;
+}
+.givewp-conditional-logic__popover-box {
+  background: var(--givewp-shades-white, #FFF);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem 0 #E6E6E6;
+  margin: 0.5rem;
+  width: 45rem;
+}
+.givewp-conditional-logic__popover-header {
+  align-items: center;
+  border-bottom: 1px solid #DDD;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+.givewp-conditional-logic__popover-header h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin: 0;
+}
+.givewp-conditional-logic__popover-header .components-button.has-icon {
+  height: 1.5rem;
+  min-width: auto;
+  padding: 0;
+  width: 1.5rem;
+}
+.givewp-conditional-logic__popover-content {
+  padding: 1rem 1.5rem 1.5rem;
+}
+.givewp-conditional-logic__popover-content__add-rule {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.125rem 0;
+}
+.givewp-conditional-logic__popover-content__add-rule p {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  margin: 0;
+}
+.givewp-conditional-logic__popover-content__add-rule button {
+  color: var(--givewp-grey-500);
+}
+.givewp-conditional-logic__popover-content__add-rule button.components-button.has-icon {
+  height: 1.25rem;
+  min-width: auto;
+  padding: 0;
+  width: 1.25rem;
+}
+.givewp-conditional-logic__popover-content__rules {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.givewp-conditional-logic__popover-content__rule {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+.givewp-conditional-logic__popover-content__rule .components-base-control__field {
+  margin: 0;
+}
+.givewp-conditional-logic__popover-content__rule .components-base-control__field select.components-select-control__input,
+.givewp-conditional-logic__popover-content__rule .components-base-control__field input.components-text-control__input {
+  height: 2.25rem;
+  line-height: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 1.5rem;
+}
+.givewp-conditional-logic__popover-content__rule button {
+  color: var(--givewp-grey-500);
+}
+.givewp-conditional-logic__popover-content__rule button.components-button.has-icon {
+  height: 1.25rem;
+  min-width: auto;
+  padding: 0;
+  width: 1.25rem;
+}
+.givewp-conditional-logic__popover-content__no-rule {
+  line-height: 1.25rem;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.givewp-conditional-logic__popover-content__no-rule button.components-button.is-link {
+  text-decoration: none;
+}
+.givewp-conditional-logic__popover-content__no-rule button.components-button.is-link:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */

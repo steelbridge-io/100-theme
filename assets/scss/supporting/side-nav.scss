@@ -1,0 +1,132 @@
+/** Sidebar Nav
+------------------------------------------------------------- */
+.side-slider-nav-logo {
+  padding: 2.618em;
+}
+.social-media-side-slider {
+  color: $white;
+  margin: $margin2618 auto;
+  display: flex;
+  i {
+	margin: 0 auto;
+	padding: 0 0.2em;
+  }
+  a.social-link {
+	padding: 0;
+	margin: 0 auto;
+  }
+}
+.side-nav-row.row {
+  height: 100%;
+}
+.slide-nav-left-side {
+  background-color: $black;
+  height: 100%;
+  padding: $paddingx1;
+}
+.slide-nav-right-side {
+  background-color: #3857A1;
+  height: 100%;
+}
+.nav-link:focus {
+  outline: 0 !important;
+}
+#menu-side-nav {
+  .dropdown-menu {
+	border: none;
+  }
+  ul.dropdown-menu.show {
+	background-color: transparent;
+	li {
+	  border: none;
+	}
+	li a {
+	  padding: 0;
+	}
+
+	li a:hover,
+	li a:focus {
+	  background-color: transparent;
+	  outline: 0 !important;outline-color: unset !important;
+	}
+  }
+  li {
+	list-style-type: none;
+  }
+}
+#menu-slide-in {
+  .dropdown-menu {
+	border: none;
+  }
+  ul.dropdown-menu.show {
+	background-color: transparent;
+	li {
+	  border: none;
+	}
+	li a {
+	  padding: 0;
+	}
+	.nav-link:focus,
+	li a:hover,
+	li a:focus {
+	  background-color: transparent;
+	  outline: 0 !important;
+	}
+  }
+  li {
+	list-style-type: none;
+  }
+}
+.sidebar-icon {
+  .hamburger-icon {
+	width: 65px;
+	height: 5px;
+	background-color: $white;
+	margin-left: .5em;
+  }
+}
+.hamburger-icon.icon-2 {
+	margin-top: 6px;
+  	margin-bottom: 6px;
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9000;
+  top: 0;
+  right: 0;
+  background-color: rgba(52,58,64,0.90);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: $body;
+  color: $white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: $body;}
+}

@@ -1,0 +1,72 @@
+/* Modal SCSS
+------------------------------------------- */
+
+.modal-content {
+  &.donations-modal {
+	background-color: $background-color-smoke !important;
+  }
+}
+
+  .modal-img-wrapper {
+	margin: -25px 0 0 0;
+  }
+
+  #modal-logo .image-fluid {
+	padding: .3em;
+	background-color: $white;
+	border-radius: 5%;
+	margin: .5em;
+  }
+
+  .modal-title {
+	color: $white;
+  }
+
+  .modal-body {
+	color: $white;
+  }
+
+  .modal-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 1rem;
+	border: none;
+  }
+
+  .modal-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 1em;
+	pointer-events: auto;
+	background-color: $brown;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 0;
+	outline: 0;
+  }
+
+  .modal-content.gallery {
+	background-color: $black;
+  }
+
+  .close {
+	float: right;
+	text-align: right;
+	font-size: 1.8rem;
+	font-weight: 700;
+	line-height: 1;
+	color: $black;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .5;
+	&:hover {
+	  color: $black;
+	}
+	&:active {
+	  border: none;
+	  outline: none;
+	}
+  }
+

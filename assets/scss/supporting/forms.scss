@@ -1,0 +1,47 @@
+/* Forms
+-------------------------------------------- */
+
+.gform_footer.top_label #gform_submit_button_1 {
+  padding: 1em !important;
+  background-color: $brown !important;
+  color: $white !important;
+  font-size: 1.2rem;
+  border: none !important;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+/*.asterisk::-webkit-input-placeholder {
+  color:    #f00;
+}
+.asterisk:-moz-placeholder {
+  color:    #f00;
+  opacity:  1;
+}
+.asterisk::-moz-placeholder {
+  color:    #f00;
+  opacity:  1;
+}
+.asterisk:-ms-input-placeholder {
+  color:    #f00;
+}*/
+
+.indicates-required {
+  font-size: 1rem;
+  color: $white;
+}

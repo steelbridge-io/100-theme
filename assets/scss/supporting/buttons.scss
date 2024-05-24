@@ -1,0 +1,209 @@
+/* Buttons
+----------------------------------------------------------------------------- */
+
+.gform_button.button {
+	font-family: Lato, Sans-Serif !important;
+	font-weight: 300 !important;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.tribe-common-c-btn {
+	font-family: Lato, Sans-Serif !important;
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+.btn.become-volunteer {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#donate-btns {
+	.col-md-3 {
+		max-width: 19% !important;
+	}
+}
+
+.lato-font {
+	font-family: 'Lato', sans-serif !important;
+	font-weight: 300 !important;
+	h5 {
+		font-family: 'Lato', sans-serif !important;
+		font-weight: 300 !important;
+	}
+	.nav-link {
+		font-family: 'Lato', sans-serif !important;
+		font-weight: 300 !important;
+	}
+}
+
+.donate-btn {
+  background-color: #2f56a6;
+  border-color: #2f56a6;
+  color: #fff;
+  &.btn {
+	border-radius: 0;
+  }
+}
+
+.btn {
+  font-family: 'Lato', sans-serif !important;
+	font-weight: 300 !important;
+	h5 {
+		font-family: 'Lato', sans-serif !important;
+		font-weight: 300 !important;
+	}
+}
+
+.center-btn {
+  margin: 0 auto;
+  display: block;
+}
+
+.events-btn {
+  padding: 1em 2em;
+  font-weight: 700;
+}
+
+.btn {
+  h5 {
+    margin: 0;
+  }
+}
+
+.front-page-one-button h5 {
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.2;
+ }
+.btn-blue {
+  color: $white;
+  background-color: $dark-blue;
+  border-radius: 0;
+  padding: 0.5em 2em 0.7em 2em;
+}
+.btn.btn-blue:hover {
+  color: $white;
+}
+
+.btn-brown {
+  color: #fff;
+  background-color: $brown;
+  border-color: $brown;
+}
+.btn-yellow {
+  color: $blue;
+  background-color: $yellow;
+  border-color: $yellow;
+}
+
+.btn-brown:hover {
+  color: #fff;
+  background-color: $black;
+  border-color: $black;
+}
+
+.archive-pagination.pagination {
+  .pagination-next a {
+	color: #fff;
+	background-color: $black;
+	border-color: $black;
+  }
+  .pagination-previous a {
+	color: #fff;
+	background-color: $black;
+	border-color: $black;
+  }
+}
+
+.btn-brown:focus, .btn-brown.focus {
+  color: #fff;
+  background-color: $black;
+  border-color: $black;
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-brown.disabled, .btn-brown:disabled {
+  color: #fff;
+  background-color: $brown;
+  border-color: $brown;
+}
+
+.btn-yellow {
+  color: #fff;
+  background-color: $yellow;
+  border-color: $yellow;
+}
+
+.btn-yellow:hover {
+  color: #fff;
+  background-color: $yellow;
+  border-color: $yellow;
+}
+
+.btn-gray {
+  color: #fff;
+  background-color: $gray;
+  border-color: $gray;
+}
+
+.btn-gray:hover {
+  color: #fff;
+  background-color: $black;
+  border-color: $black;
+}
+
+.btn-gray:focus, .btn-gray.focus {
+  color: #fff;
+  background-color: $black;
+  border-color: $black;
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-gray.disabled, .btn-gray:disabled {
+  color: #fff;
+  background-color: $gray;
+  border-color: $gray;
+}
+
+/** max width */
+@media (max-width: 575.98px) { }
+
+@media (max-width: 767.98px) { }
+
+@media (max-width: 991.98px) { }
+
+@media (max-width: 1199.98px) {
+  .nav-donate.btn.donate-btn {
+	float: right;
+  }
+  .front-page-one-button {
+	margin: 0 auto;
+	display: block;
+
+  }
+}
+
+@media (max-width: 1399.98px) { }
+
+
+/** min width */
+@media (min-width: 576px) { }
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) {
+  .nav-donate {
+	display: none;
+  }
+}
+
+@media (min-width: 1400px) { }
+
+

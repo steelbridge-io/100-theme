@@ -1,0 +1,39 @@
+/**
+ Landing page CSS */
+
+h2 {
+	font-size: clamp( 1rem, 1rem + 3vw, 3rem );
+}
+
+.wellington-sig {
+	display: none;
+}
+
+@media (min-width: 992px) {
+	.giving-tuesday-21 a img {
+		width: 15vw;
+		transition: 0.5s;
+	}
+	.max-width-1200 {
+		max-width: 1200px;
+	}
+	.container-fluid.max-width-1200 {
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 991.98px) {
+	.giving-tuesday-21 a img {
+		width: 15vw;
+		transition: 0.5s;
+	}
+}
+
+@media (max-width: 767.99px) {
+	.giving-tuesday-21 a img {
+		width: 25vw;
+		margin: 0 auto;
+		display: block;
+		transition: 0.5s;
+	}
+}

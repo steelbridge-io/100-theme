@@ -46,9 +46,6 @@
 	function donations_callback( $post ) {
 	wp_nonce_field( basename( __FILE__ ), 'donations_nonce' );
 	$donations_meta = get_post_meta( $post->ID );
-
-	  //$screen = get_current_screen();
-	  //print_r($screen);
 ?>
 
 		<p>
@@ -64,8 +61,8 @@
 		  <input style="width: 100%;" type="text" name="donation-general-label" id="donation-general-label" value="<?php if (isset($donations_meta['donation-general-label'])) echo $donations_meta['donation-general-label'][0]; ?>" />
 		</p>
 		<p>
-		  <strong><label for="donation-general" class="donation-general"><?php _e('General Donation Short Code ID','100-black-men-ba')?></label></strong>
-		  <input style="width: 100%;" type="text" name="donation-general" id="donation-general" value="<?php if (isset($donations_meta['donation-general'])) echo $donations_meta['donation-general'][0]; ?>" />
+		  <strong><label for="donation-general" class="donation-general"><?php _e('General donation link','100-black-men-ba')?></label></strong>
+		  <input style="width: 100%;" type="url" name="donation-general" id="donation-general" value="<?php if (isset($donations_meta['donation-general'])) echo $donations_meta['donation-general'][0]; ?>" />
 		</p>
 
 	  <p>
@@ -76,17 +73,17 @@
 		<nav>
 		  <div class="nav nav-tabs" id="nav-tab" role="tablist">
 			<a class="nav-item nav-link active" id="donation-1-tab" data-toggle="tab" href="#donation-1" role="tab" aria-controls="donation-1" aria-selected="true">Donation &#35;1</a>
-			<a class="nav-item nav-link" id="donaion-2-tab" data-toggle="tab" href="#donaion-2" role="tab" aria-controls="donaion-2" aria-selected="false">Donation &#35;2</a>
-			<a class="nav-item nav-link" id="donaion-3-tab" data-toggle="tab" href="#donaion-3" role="tab" aria-controls="donaion-3" aria-selected="false">Donation &#35;3</a>
-			<a class="nav-item nav-link" id="donaion-4-tab" data-toggle="tab" href="#donaion-4" role="tab" aria-controls="donaion-4" aria-selected="false">Donation &#35;4</a>
-			<a class="nav-item nav-link" id="donaion-5-tab" data-toggle="tab" href="#donaion-5" role="tab" aria-controls="donaion-5" aria-selected="false">Donation &#35;5</a>
-			<a class="nav-item nav-link" id="donaion-6-tab" data-toggle="tab" href="#donaion-6" role="tab" aria-controls="donaion-6" aria-selected="false">Donation &#35;6</a>
-			<a class="nav-item nav-link" id="donaion-7-tab" data-toggle="tab" href="#donaion-7" role="tab" aria-controls="donaion-7" aria-selected="false">Donation &#35;7</a>
-			<a class="nav-item nav-link" id="donaion-8-tab" data-toggle="tab" href="#donaion-8" role="tab" aria-controls="donaion-8" aria-selected="false">Donation &#35;8</a>
-			<a class="nav-item nav-link" id="donaion-9-tab" data-toggle="tab" href="#donaion-9" role="tab" aria-controls="donaion-9" aria-selected="false">Donation &#35;9</a>
-			<a class="nav-item nav-link" id="donaion-10-tab" data-toggle="tab" href="#donaion-10" role="tab" aria-controls="donaion-10" aria-selected="false">Donation &#35;10</a>
-			<a class="nav-item nav-link" id="donaion-11-tab" data-toggle="tab" href="#donaion-11" role="tab" aria-controls="donaion-11" aria-selected="false">Donation &#35;11</a>
-			<a class="nav-item nav-link" id="donaion-12-tab" data-toggle="tab" href="#donaion-12" role="tab" aria-controls="donaion-12" aria-selected="false">Donation &#35;12</a>
+			<a class="nav-item nav-link" id="donation-2-tab" data-toggle="tab" href="#donation-2" role="tab" aria-controls="donation-2" aria-selected="false">Donation &#35;2</a>
+			<a class="nav-item nav-link" id="donation-3-tab" data-toggle="tab" href="#donation-3" role="tab" aria-controls="donation-3" aria-selected="false">Donation &#35;3</a>
+			<a class="nav-item nav-link" id="donation-4-tab" data-toggle="tab" href="#donation-4" role="tab" aria-controls="donation-4" aria-selected="false">Donation &#35;4</a>
+			<a class="nav-item nav-link" id="donation-5-tab" data-toggle="tab" href="#donation-5" role="tab" aria-controls="donation-5" aria-selected="false">Donation &#35;5</a>
+			<a class="nav-item nav-link" id="donation-6-tab" data-toggle="tab" href="#donation-6" role="tab" aria-controls="donation-6" aria-selected="false">Donation &#35;6</a>
+			<a class="nav-item nav-link" id="donation-7-tab" data-toggle="tab" href="#donation-7" role="tab" aria-controls="donation-7" aria-selected="false">Donation &#35;7</a>
+			<a class="nav-item nav-link" id="donation-8-tab" data-toggle="tab" href="#donation-8" role="tab" aria-controls="donation-8" aria-selected="false">Donation &#35;8</a>
+			<a class="nav-item nav-link" id="donation-9-tab" data-toggle="tab" href="#donation-9" role="tab" aria-controls="donation-9" aria-selected="false">Donation &#35;9</a>
+			<a class="nav-item nav-link" id="donation-10-tab" data-toggle="tab" href="#donation-10" role="tab" aria-controls="donation-10" aria-selected="false">Donation &#35;10</a>
+			<a class="nav-item nav-link" id="donation-11-tab" data-toggle="tab" href="#donation-11" role="tab" aria-controls="donation-11" aria-selected="false">Donation &#35;11</a>
+			<a class="nav-item nav-link" id="donation-12-tab" data-toggle="tab" href="#donation-12" role="tab" aria-controls="donation-12" aria-selected="false">Donation &#35;12</a>
 		  </div>
 		</nav>
 		<div class="tab-content" id="nav-tabContent">
@@ -103,14 +100,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-1" class="donation-row-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-1" id="donation-1" value="<?php if (isset($donations_meta['donation-1'])) echo $donations_meta['donation-1'][0]; ?>" />
+					<strong><label for="donation-1" class="donation-row-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-1" id="donation-1" value="<?php if (isset($donations_meta['donation-1'])) echo $donations_meta['donation-1'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-2" role="tabpanel" aria-labelledby="donaion-2-tab">
+		  <div class="tab-pane fade" id="donation-2" role="tabpanel" aria-labelledby="donation-2-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -123,14 +120,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-2" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-2" id="donation-2" value="<?php if (isset($donations_meta['donation-2'])) echo $donations_meta['donation-2'][0]; ?>" />
+					<strong><label for="donation-2" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-2" id="donation-2" value="<?php if (isset($donations_meta['donation-2'])) echo $donations_meta['donation-2'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-3" role="tabpanel" aria-labelledby="donaion-3-tab">
+		  <div class="tab-pane fade" id="donation-3" role="tabpanel" aria-labelledby="donation-3-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -143,14 +140,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-3" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-3" id="donation-3" value="<?php if (isset($donations_meta['donation-3'])) echo $donations_meta['donation-3'][0]; ?>" />
+					<strong><label for="donation-3" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-3" id="donation-3" value="<?php if (isset($donations_meta['donation-3'])) echo $donations_meta['donation-3'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-4" role="tabpanel" aria-labelledby="donaion-4-tab">
+		  <div class="tab-pane fade" id="donation-4" role="tabpanel" aria-labelledby="donation-4-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -163,14 +160,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-4" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-4" id="donation-4" value="<?php if (isset($donations_meta['donation-4'])) echo $donations_meta['donation-4'][0]; ?>" />
+					<strong><label for="donation-4" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-4" id="donation-4" value="<?php if (isset($donations_meta['donation-4'])) echo $donations_meta['donation-4'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-5" role="tabpanel" aria-labelledby="donaion-5-tab">
+		  <div class="tab-pane fade" id="donation-5" role="tabpanel" aria-labelledby="donation-5-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -183,14 +180,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-5" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-5" id="donation-5" value="<?php if (isset($donations_meta['donation-5'])) echo $donations_meta['donation-5'][0]; ?>" />
+					<strong><label for="donation-5" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-5" id="donation-5" value="<?php if (isset($donations_meta['donation-5'])) echo $donations_meta['donation-5'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-6" role="tabpanel" aria-labelledby="donaion-6-tab">
+		  <div class="tab-pane fade" id="donation-6" role="tabpanel" aria-labelledby="donation-6-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -203,14 +200,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-6" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-6" id="donation-6" value="<?php if (isset($donations_meta['donation-6'])) echo $donations_meta['donation-6'][0]; ?>" />
+					<strong><label for="donation-6" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-6" id="donation-6" value="<?php if (isset($donations_meta['donation-6'])) echo $donations_meta['donation-6'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-7" role="tabpanel" aria-labelledby="donaion-7-tab">
+		  <div class="tab-pane fade" id="donation-7" role="tabpanel" aria-labelledby="donation-7-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -223,14 +220,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-7" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-7" id="donation-7" value="<?php if (isset($donations_meta['donation-7'])) echo $donations_meta['donation-7'][0]; ?>" />
+					<strong><label for="donation-7" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-7" id="donation-7" value="<?php if (isset($donations_meta['donation-7'])) echo $donations_meta['donation-7'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-8" role="tabpanel" aria-labelledby="donaion-8-tab">
+		  <div class="tab-pane fade" id="donation-8" role="tabpanel" aria-labelledby="donation-8-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -243,14 +240,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-8" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-8" id="donation-8" value="<?php if (isset($donations_meta['donation-8'])) echo $donations_meta['donation-8'][0]; ?>" />
+					<strong><label for="donation-8" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-8" id="donation-8" value="<?php if (isset($donations_meta['donation-8'])) echo $donations_meta['donation-8'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-9" role="tabpanel" aria-labelledby="donaion-9-tab">
+		  <div class="tab-pane fade" id="donation-9" role="tabpanel" aria-labelledby="donation-9-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -263,14 +260,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-9" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-9" id="donation-9" value="<?php if (isset($donations_meta['donation-9'])) echo $donations_meta['donation-9'][0]; ?>" />
+					<strong><label for="donation-9" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-9" id="donation-9" value="<?php if (isset($donations_meta['donation-9'])) echo $donations_meta['donation-9'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-10" role="tabpanel" aria-labelledby="donaion-10-tab">
+		  <div class="tab-pane fade" id="donation-10" role="tabpanel" aria-labelledby="donation-10-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -283,14 +280,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-10" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-10" id="donation-10" value="<?php if (isset($donations_meta['donation-10'])) echo $donations_meta['donation-10'][0]; ?>" />
+					<strong><label for="donation-10" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-10" id="donation-10" value="<?php if (isset($donations_meta['donation-10'])) echo $donations_meta['donation-10'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-11" role="tabpanel" aria-labelledby="donaion-11-tab">
+		  <div class="tab-pane fade" id="donation-11" role="tabpanel" aria-labelledby="donation-11-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -303,14 +300,14 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-11" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-11" id="donation-11" value="<?php if (isset($donations_meta['donation-11'])) echo $donations_meta['donation-11'][0]; ?>" />
+					<strong><label for="donation-11" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-11" id="donation-11" value="<?php if (isset($donations_meta['donation-11'])) echo $donations_meta['donation-11'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		  <div class="tab-pane fade" id="donaion-12" role="tabpanel" aria-labelledby="donaion-12-tab">
+		  <div class="tab-pane fade" id="donation-12" role="tabpanel" aria-labelledby="donation-12-tab">
 			<div class="row">
 			  <div class="col-md-6">
 				<div class="card">
@@ -323,8 +320,8 @@
 			  <div class="col-md-6">
 				<div class="card">
 				  <p>
-					<strong><label for="donation-12" class="donation-title"><?php _e('Donation Short Code ID','100-black-men-ba')?></label></strong>
-					<input style="width: 100%;" type="text" name="donation-12" id="donation-12" value="<?php if (isset($donations_meta['donation-12'])) echo $donations_meta['donation-12'][0]; ?>" />
+					<strong><label for="donation-12" class="donation-title"><?php _e('Link to donation page','100-black-men-ba')?></label></strong>
+					<input style="width: 100%;" type="url" name="donation-12" id="donation-12" value="<?php if (isset($donations_meta['donation-12'])) echo $donations_meta['donation-12'][0]; ?>" />
 				  </p>
 				</div>
 			  </div>

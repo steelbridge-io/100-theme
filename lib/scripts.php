@@ -19,34 +19,18 @@ function bfg_theme_scripts() {
 	wp_register_style('animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '', 'all');
 	wp_enqueue_style('animate');
 	wp_enqueue_style( 'custom-theme-css', get_stylesheet_directory_uri() . '/assets/css/custom-theme.css', array(), '', 'all');
+	wp_enqueue_style('icons', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200', array(), '', 'all');
 
 	if ( is_page_template( 'templates/page_landing.php' ) ) {
 		wp_enqueue_style( 'landing-css', get_stylesheet_directory_uri() . '/assets/landing-css.css', array(), '1.0', 'all' );
 	}
 
-	//wp_register_style('mailchimp-css', '//cdn-images.mailchimp.com/embedcode/classic-10_7.css', array(), '', 'all');
-	//wp_enqueue_style('mailchimp-css');
-
  if(function_exists('load_wst_customizer_css')) {
 	wp_add_inline_style('custom-css', load_wst_customizer_css());
  }
 
- /*wp_register_style('gallery-style', '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css', array(), '', 'all');
- wp_enqueue_style('gallery-style');*/
-
-//	wp_register_script('jquery321', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '', true );
-//	wp_enqueue_script('jquery321');
-
 	$version = wp_get_theme()->Version;
 	if ( !is_admin() ) {
-
-		// Deregister jQuery and use Bootstrap supplied version
-		/* wp_register_script( 'jquery_3.2.1', BFG_THEME_JS . 'jquery.slim.min.js', array(), $version, true );
-		if(is_front_page() || is_home()) {
-		wp_deregister_script( 'jquery' );
-		wp_enqueue_script('jquery_3.2.1');
-		} */
-
 
 		// Disable the superfish script
 		wp_deregister_script( 'superfish' );
@@ -89,9 +73,6 @@ function bfg_theme_scripts() {
 add_action( 'admin_enqueue_scripts', 'load_metafield_js' );
 function load_metafield_js() {
 
-	//$version = wp_get_theme()->Version;
-	//wp_enqueue_script( 'meta-field-js', BFG_THEME_JS . 'meta-field.js', array('jquery'), $version, true );
-
 	// Registers and enqueues the required javascript for image management within wp dashboard.
 	wp_register_script( 'meta-box-image', BFG_THEME_JS . 'meta-field.js', array( 'jquery' ) );
 	wp_localize_script( 'meta-box-image', 'meta_image',
@@ -103,30 +84,33 @@ function load_metafield_js() {
 	wp_enqueue_script( 'meta-box-image' );
 }
 
-	/*function wpdocs_enqueue_custom_admin_style($hook) {
-
-		if( 'post.php' != $hook) { return;}
-
-		wp_register_style('donations-bootstrap', get_stylesheet_directory_uri() . '/assets/css/editorstyle.css', false, '4.4.5' );
-		wp_enqueue_style('donations-bootstrap');
-
-		// Register Popper JS and enqueue it
-		wp_register_script( 'app-popper-js', BFG_THEME_JS . 'popper.min.js', array( 'jquery' ), $version, true );
-		wp_enqueue_script( 'app-popper-js' );
-
-		// Register Bootstrap JS and enqueue it
-		wp_register_script( 'app-bootstrap-js', BFG_THEME_JS . 'bootstrap.min.js', array( 'jquery' ), $version, true );
-		wp_enqueue_script( 'app-bootstrap-js' );
-
-
-	}
-	add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );*/
-
-
-
-
 // Editor Styles
 add_action( 'init', 'bfg_custom_editor_css' );
 function bfg_custom_editor_css() {
 	add_editor_style( get_stylesheet_uri() );
+}
+
+if (! function_exists('fa_custom_setup_kit') ) {
+	/**
+	 * Sets up a custom Font Awesome kit for enqueueing scripts on specific WordPress hooks.
+	 *
+	 * @param  string  $kit_url  The URL of the Font Awesome kit. Default is 'https://use.fontawesome.com/releases/v5.15.4/js/all.js'.
+	 *
+	 * @return void
+	 */
+	function fa_custom_setup_kit($kit_url = 'https://use.fontawesome.com/releases/v5.15.4/js/all.js') {
+		foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
+			add_action(
+				$action,
+				function () use ( $kit_url ) {
+					if(is_page_template('template-campaign.php')) {
+						wp_enqueue_script( 'font-awesome-kit',
+							$kit_url,
+							[],
+							NULL );
+					}
+				}
+			);
+		}
+	}
 }

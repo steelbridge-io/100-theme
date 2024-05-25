@@ -10,13 +10,10 @@
  *
  */
 
-//remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 
-//* Add custom body class
 add_filter( 'body_class', 'donation_body_class' );
+
 function donation_body_class( $classes ) {
-	//if (is_page_template('templates/donations-template.php')) {
-	//if (is_page( 26679 ) || is_page(26762) || is_page(26705) || is_page(28056)) {
 	if ( is_page( 28056 ) ) {
 		$classes[] = 'donations-template-class';
 	}
@@ -25,6 +22,14 @@ function donation_body_class( $classes ) {
 }
 
 add_action( 'genesis_before_footer', 'add_donations_options', 5 );
+/**
+ * Adds donation options to a donation form or page.
+ *
+ * This method retrieves various donation-related metadata from the current post and displays the corresponding
+ * donation options in the form or page. It also allows customizing the labels and URLs for each donation option.
+ *
+ * @return void
+ */
 function add_donations_options() {
 	$default = '';
 
@@ -33,9 +38,11 @@ function add_donations_options() {
 	$donation_general_desc  = get_post_meta( get_the_ID(),
 		'donation-general-desc',
 		TRUE );
+
 	$donation_general_label = get_post_meta( get_the_ID(),
 		'donation-general-label',
 		TRUE );
+
 	$donation_general       = get_post_meta( get_the_ID(),
 		'donation-general',
 		TRUE );
@@ -47,51 +54,107 @@ function add_donations_options() {
 	$donation_1_label  = get_post_meta( get_the_ID(),
 		'donation-1-label',
 		TRUE );
-	$donation_1        = get_post_meta( get_the_ID(), 'donation-1', TRUE );
+
+	$donation_1        = get_post_meta( get_the_ID(),
+		'donation-1',
+		TRUE );
+
 	$donation_2_label  = get_post_meta( get_the_ID(),
 		'donation-2-label',
 		TRUE );
-	$donation_2        = get_post_meta( get_the_ID(), 'donation-2', TRUE );
+
+	$donation_2        = get_post_meta( get_the_ID(),
+		'donation-2',
+		TRUE );
+
 	$donation_3_label  = get_post_meta( get_the_ID(),
 		'donation-3-label',
 		TRUE );
-	$donation_3        = get_post_meta( get_the_ID(), 'donation-3', TRUE );
+
+	$donation_3        = get_post_meta( get_the_ID(),
+		'donation-3',
+		TRUE );
+
 	$donation_4_label  = get_post_meta( get_the_ID(),
 		'donation-4-label',
 		TRUE );
-	$donation_4        = get_post_meta( get_the_ID(), 'donation-4', TRUE );
+
+	$donation_4        = get_post_meta( get_the_ID(),
+		'donation-4',
+		TRUE );
+
 	$donation_5_label  = get_post_meta( get_the_ID(),
 		'donation-5-label',
 		TRUE );
-	$donation_5        = get_post_meta( get_the_ID(), 'donation-5', TRUE );
+
+	$donation_5        = get_post_meta( get_the_ID(),
+		'donation-5',
+		TRUE );
+
 	$donation_6_label  = get_post_meta( get_the_ID(),
 		'donation-6-label',
 		TRUE );
-	$donation_6        = get_post_meta( get_the_ID(), 'donation-6', TRUE );
+
+	$donation_6        = get_post_meta( get_the_ID(),
+		'donation-6',
+		TRUE );
+
 	$donation_7_label  = get_post_meta( get_the_ID(),
 		'donation-7-label',
 		TRUE );
-	$donation_7        = get_post_meta( get_the_ID(), 'donation-7', TRUE );
+
+	$donation_7        = get_post_meta( get_the_ID(),
+		'donation-7',
+		TRUE );
+
 	$donation_8_label  = get_post_meta( get_the_ID(),
 		'donation-8-label',
 		TRUE );
-	$donation_8        = get_post_meta( get_the_ID(), 'donation-8', TRUE );
+
+	$donation_8        = get_post_meta( get_the_ID(),
+		'donation-8',
+		TRUE );
+
 	$donation_9_label  = get_post_meta( get_the_ID(),
 		'donation-9-label',
 		TRUE );
-	$donation_9        = get_post_meta( get_the_ID(), 'donation-9', TRUE );
+
+	$donation_9        = get_post_meta( get_the_ID(),
+		'donation-9',
+		TRUE );
+
 	$donation_10_label = get_post_meta( get_the_ID(),
 		'donation-10-label',
 		TRUE );
-	$donation_10       = get_post_meta( get_the_ID(), 'donation-10', TRUE );
+
+	$donation_10       = get_post_meta( get_the_ID(),
+		'donation-10',
+		TRUE );
+
 	$donation_11_label = get_post_meta( get_the_ID(),
 		'donation-11-label',
 		TRUE );
-	$donation_11       = get_post_meta( get_the_ID(), 'donation-11', TRUE );
+
+	$donation_11       = get_post_meta( get_the_ID(),
+		'donation-11',
+		TRUE );
+
 	$donation_12_label = get_post_meta( get_the_ID(),
 		'donation-12-label',
 		TRUE );
-	$donation_12       = get_post_meta( get_the_ID(), 'donation-12', TRUE );
+
+	$donation_12       = get_post_meta( get_the_ID(),
+		'donation-12',
+		TRUE );
+
+	/**
+	 * Represents the label for the first donation option.
+	 *
+	 * This variable is used to store the label that is displayed for the first donation option
+	 * in a donation form or page.
+	 *
+	 * @var string
+	 */
 
 	if ( $donation_1_label !== $default
 	     || $donation_general_label !== $default
@@ -110,8 +173,8 @@ function add_donations_options() {
 									' . $donation_general_desc . '
 								</div>
 								<div class="col-md-6">
-									<button type="button" roll="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLongGeneral">'
-			     . $donation_general_label . '</button>
+									<a href="'. $donation_general .'" title="'. $donation_general_label .'"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLongGeneral">'
+			     . $donation_general_label . '</button></a>
 								</div>
 								</div>
 							</div>';
@@ -132,31 +195,31 @@ function add_donations_options() {
 
 		if ( $donation_2_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target ="#exampleModalLong2">
+								<a href="'. $donation_2 .'" title="'. $donation_2_label .'"><button type="button" class="btn btn-primary">
 								' . $donation_2_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_3_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type = "button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong3">
+								<a href="'. $donation_3 .'" title="'. $donation_3_label .'"><button type = "button" class="btn btn-primary">
 								' . $donation_3_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_4_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong4">
+								<a href="'. $donation_4 .'" title="'. $donation_4_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_4_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_5_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong5">
+								<a href="'. $donation_5 .'" title="'. $donation_5_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_5_label . '
 								</button>
 							</div>';
@@ -164,350 +227,63 @@ function add_donations_options() {
 
 		if ( $donation_6_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong6">
+								<a href="'. $donation_6 .'" title="'. $donation_6_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_6_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_7_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong7">
+								<a href="'. $donation_7 .'" title="'. $donation_7_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_7_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_8_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong8">
+								<a href="'. $donation_8 .'" title="'. $donation_8_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_8_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_9_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong9">
+								<a href="'. $donation_9 .'" title="'. $donation_9_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_9_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_10_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong10">
+								<a href="'. $donation_10 .'" title="'. $donation_10_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_10_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_11_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong11">
+								<a href="'. $donation_11 .'" title="'. $donation_11_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_11_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		if ( $donation_12_label !== $default ) {
 			echo '<div class="col-md-2 donate-btn">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong12">
+								<a href="'. $donation_12 .'" title="'. $donation_12_label .'"><button type="button" class="btn btn-primary" >
 									' . $donation_12_label . '
-								</button>
+								</button></a>
 							</div>';
 		}
 
 		echo '
 			</div>
 		</div>';
-
-		// Modal General
-		if ( $donation_general !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLongGeneral" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongGeneralTitle" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_general']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-
-		// Modal 1
-		if ( $donation_1 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong1Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_1']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-		// Modal 2
-		if ( $donation_2 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong2Title" aria-hidden="true">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content donations-modal">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-									</div>
-									<div class="modal-body donations-modal-body">
-									 '
-			     . do_shortcode( "[give_form id='$donation_2']" ) . '
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-									</div>
-								</div>
-							</div>
-						</div>';
-		}
-
-		// Modal 3
-		if ( $donation_3 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong3Title" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content donations-modal">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body donations-modal-body">
-									'
-			     . do_shortcode( "[give_form id='$donation_3']" ) . '
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>';
-		}
-
-		// Modal 4
-		if ( $donation_4 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong4Title" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content donations-modal">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body donations-modal-body">
-									'
-			     . do_shortcode( "[give_form id='$donation_4']" ) . '
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>';
-		}
-
-		// Modal 5
-		if ( $donation_5 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong5Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_5']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-		// Modal 6
-		if ( $donation_6 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong6Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_6']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-		// Modal 7
-		if ( $donation_7 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong7Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_7']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-		// Modal 8
-		if ( $donation_8 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong8Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_8']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-		// Modal 9
-		if ( $donation_9 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong9Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_9']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-		// Modal 10
-		if ( $donation_10 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong10Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_10']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-		// Modal 11
-		if ( $donation_11 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong11Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_11']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
-
-		// Modal 12
-		if ( $donation_12 !== $default ) {
-			echo '<div class="modal fade" id="exampleModalLong12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLong12Title" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content donations-modal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body donations-modal-body">
-											'
-			     . do_shortcode( "[give_form id='$donation_12']" ) . '
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-primary btn-donations" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>';
-		}
 	}
 }
 

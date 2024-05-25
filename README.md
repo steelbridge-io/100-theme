@@ -2,6 +2,9 @@
 
 ## Introduction
 
+
+¡Ey! muy importante damas y caballeros -> Must use node 14.^ !!!!!
+
 100 Black Men Bay Area Theme is a genesis child theme which integrates [Bootstrap](http://getbootstrap.com/). It uses Gulp to handle tasks, configuration and lint files.
 
 ## Installation Instructions

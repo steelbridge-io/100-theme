@@ -29,6 +29,12 @@ function add_buttons_div() {
 	echo '<div class="angle-bg"></div>';
 }
 
+
+add_action('genesis_before_footer', 'lei_custom_footer_div');
+function lei_custom_footer_div() {
+	echo '<div class="angle-bg-bottom"></div>';
+}
+
 /**
  * The loop content for this template.
  */

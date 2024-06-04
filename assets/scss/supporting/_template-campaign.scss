@@ -7,16 +7,18 @@ Campaign Template
 		position: relative;
 		z-index: 0;
 		&.donations-options-wrapper {
-			background-color: #F9BD26;
+			background-color: #2F56A6;
 			margin-left: 0;
 			margin-right: 0;
-			margin-top: 7.79vh;
+			margin-top: 7.4vh;
+			position: relative;
 			padding-left: 0;
 			padding-right: 0;
+			z-index: 500;
 		}
 		.container {
 			&.top-buttons-container {
-				padding: 5vh 0;
+				padding: 5vh 0 0 0;
 			}
 		}
 	}
@@ -24,14 +26,36 @@ Campaign Template
 		font-size: 2rem;
 	}
 
+	.container.bottom-go-back {
+		margin-top: 10vh;
+		padding: 0;
+		position: relative;
+		z-index: 20;
+
+		a {
+			color: #000;
+		}
+	}
+
 	.angle-bg {
 		height: 155px;
-		background: #F9BD26;
+		background: #2F56A6;
 		clip-path: polygon(0 0, 100% 0, 100% 100%);
 		margin-top: -1px;
 		position: relative;
 		z-index: 0;
 	}
+
+	.angle-bg-bottom {
+		height: 155px;
+		background: #3C3C3C;
+		clip-path: polygon(0 0, 0 100%, 100% 100%);
+		margin-bottom: -1px;
+		margin-top: -15vh;
+		position: relative;
+		z-index: -1;
+	}
+
 
 	.site-container {
 		position: relative;
@@ -50,6 +74,8 @@ Campaign Template
 	.go-back-donations {
 		a {
 			display: flex;
+			color: #f5f5f5;
+			font-size: 1.6rem;
 			align-items: center;
 			.fas {
 				margin-right: 1em;
@@ -59,9 +85,48 @@ Campaign Template
 	.container {
 		&.donations-container {
 			background-color: #eee;
-			margin: 2.618em auto;
+			margin: 4.618em auto 2.618em auto;
 			padding: 2.618em;
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+		}
+	}
+}
+
+@media screen and (max-width: 768.99px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 5vh;
+		}
+		.angle-bg-bottom {
+			margin-top: -15vh;
+		}
+	}
+}
+
+@media screen and (max-width: 430.99px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 6vh;
+		}
+
+		.angle-bg {
+			background: #2f56a6;
+			-webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%);
+			clip-path: polygon(0 0, 100% 100%, 100% 100%);
+		}
+
+		#donate-go-back {
+			justify-content: center;
+		}
+
+		.angle-bg-bottom {
+			display: none;
+		}
+
+		.container.donations-container {
+			margin: 4.618em auto 1.618em auto;
+			padding: .618em;
+			width: 95%;
 		}
 	}
 }

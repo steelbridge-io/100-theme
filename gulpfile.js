@@ -56,7 +56,7 @@ var paths = {
         dest: 'languages/bootstrap-for-genesis.pot'
     },
     site: {
-        url: 'https://100.local'
+        url: 'http://localhost:8081'
     }
 }
 

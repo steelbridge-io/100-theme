@@ -10,15 +10,15 @@ Campaign Template
 			background-color: #2F56A6;
 			margin-left: 0;
 			margin-right: 0;
-			margin-top: 7.4vh;
+			margin-top: 6.4vh;
 			position: relative;
 			padding-left: 0;
 			padding-right: 0;
-			z-index: 500;
+			z-index: 1;
 		}
 		.container {
 			&.top-buttons-container {
-				padding: 5vh 0 0 0;
+				padding: 5vh 0 5vh 0;
 			}
 		}
 	}
@@ -92,31 +92,168 @@ Campaign Template
 	}
 }
 
-@media screen and (max-width: 768.99px) {
+@media screen and (max-width: 1024px) and (max-height: 1366px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 4.4vh;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 11.4vh;
+		}
+	}
+}
+
+
+@media screen and (max-width: 932.99px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 16.9vh;
+		}
+		.container.donations-container {
+			margin: 2.618em auto 2.618em;
+		}
+		.angle-bg-bottom {
+			margin-bottom: -1px;
+			margin-top: -42vh;
+		}
+	}
+}
+
+@media screen and (max-width: 912px) and (max-height: 1368px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 4.9vh;
+		}
+	}
+}
+
+@media screen and (max-width: 896.99px) {
+	.campaign_list-template {
+		.container.donations-container {
+			margin: 2.618em auto 2.618em;
+		}
+		.angle-bg-bottom {
+			margin-bottom: -1px;
+			margin-top: -42vh;
+		}
+	}
+}
+
+@media screen and (max-width: 882px) and (max-height: 344px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 19.9vh;
+		}
+	}
+}
+
+@media screen and (max-width: 820px) and (max-height: 1180px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 5.9vh;
+		}
+	}
+}
+
+@media screen and (max-width: 767.99px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 14vh;
+		}
+		.angle-bg {
+			-webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%);
+			clip-path: polygon(0 0, 100% 100%, 100% 100%);
+		}
+		.angle-bg-bottom {
+			margin-top: -15vh;
+		}
+		#donate-go-back {
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
 	.campaign_list-template {
 		.container-fluid.donations-options-wrapper {
 			margin-top: 5vh;
 		}
+		.angle-bg {
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+			clip-path: polygon(0 0, 100% 0, 100% 100%);
+		}
+	}
+}
+
+@media screen and (max-width: 740.99px) {
+	.campaign_list-template {
+    .container.donations-container {
+			margin: 3.618em auto;
+		}
 		.angle-bg-bottom {
-			margin-top: -15vh;
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 740px) and (max-height: 360px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 15vh;
+		}
+	}
+}
+
+
+@media screen and (max-width: 667px) and (max-height: 375px) {
+	.campaign_list-template {
+		.container-fluid.donations-options-wrapper {
+			margin-top: 15vh;
+		}
+	}
+}
+
+@media screen and (max-width: 540px) and (max-height: 720px) {
+	.campaign_list-template {
+		.angle-bg {
+			-webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%);
+			clip-path: polygon(0 0, 100% 100%, 100% 100%);
 		}
 	}
 }
 
 @media screen and (max-width: 430.99px) {
 	.campaign_list-template {
+		.go-back-donations {
+			a {
+				display: flex;
+				color: #f5f5f5;
+				font-size: 1.35rem;
+				align-items: center;
+				.fas {
+					margin-right: 1em;
+				}
+			}
+		}
 		.container-fluid.donations-options-wrapper {
 			margin-top: 6vh;
+		}
+
+		.container {
+			&.top-buttons-container {
+				margin-top: 3em;
+			}
 		}
 
 		.angle-bg {
 			background: #2f56a6;
 			-webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%);
 			clip-path: polygon(0 0, 100% 100%, 100% 100%);
-		}
-
-		#donate-go-back {
-			justify-content: center;
 		}
 
 		.angle-bg-bottom {

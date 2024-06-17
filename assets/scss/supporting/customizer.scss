@@ -158,7 +158,6 @@ label[for="give-funds-select"] {
 }
 @media (min-width: 1200px) {
   #give-form-25044-1 {
-	width: 70%;
 	margin: 0 auto;
   }
 }
@@ -171,6 +170,18 @@ label[for="give-funds-select"] {
   border-radius: 1px;
   line-height: 40px;
 
+}
+
+#give-comment-wrap {
+	textarea {
+		color: #000;
+	}
+}
+
+#give-company-radio-list-wrap {
+	label {
+		margin-right: 10px;
+	}
 }
 
 #give-form-24044-wrap label {
@@ -200,7 +211,6 @@ label[for="give-funds-select"] {
 textarea {
   min-height: 50px;
   border: 2px solid lightgrey !important;
-  color: #2653af  !important;
 }
 
 /*  Members page general members alignment */

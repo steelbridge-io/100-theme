@@ -161,7 +161,7 @@ function add_donations_options() {
 	) {
 
 		if ( $donation_title !== $default ) {
-			echo '<div id="donation-template-cont" class="container mb-5">
+			echo '<div id="donation-template-cont" class="container">
 						<h2 class="give-form-title">' . $donation_title
 			     . '</h2>';
 		}

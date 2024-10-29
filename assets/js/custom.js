@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	if (itemsLength >= 12) {
-		insertLineBreaks(12, 3);
+		insertLineBreaks(12, 2);
 	}
 });
 

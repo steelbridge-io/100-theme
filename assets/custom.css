@@ -6,6 +6,12 @@ Custom CSS
 	display: none !important;
 }
 
+.btn:focus-visible,
+.btn:focus {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
 #gform_wrapper_2 .gfield_label {
 	color: #ffffff;
 }
@@ -25,7 +31,7 @@ Custom CSS
 }
 
 #donation-template-cont {
-	margin-top: 8em;
+	margin-top: 4.5em;
 }
 
 #general-section.card {

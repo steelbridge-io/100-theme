@@ -68,6 +68,13 @@
 	}
 }
 
+#give-form-23148-1 {
+	#give-donation-level-button-wrap li:nth-child(6)::after {
+		content: "\A"; /* Adds a line break */
+		white-space: pre; /* Necessary for \A to be rendered as a line break */
+	}
+}
+
 /** max width */
 @media (max-width: 1399.98px) { }
 

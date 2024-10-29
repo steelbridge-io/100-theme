@@ -121,73 +121,13 @@ var $ =jQuery.noConflict();
 		});
 	});
 
-/**
- *
- */
-/*document.addEventListener("DOMContentLoaded", function() {
-	const form = document.querySelector("#give-form-23148-wrap");
-	const ul = form.querySelector("#give-donation-level-button-wrap");
-	const listItems = ul.querySelectorAll("li");
-
-	if (listItems.length >= 5) {
-		const lineBreak1 = document.createElement("br");
-		const lineBreak2 = document.createElement("br");
-		ul.insertBefore(lineBreak1, listItems[5]);
-		ul.insertBefore(lineBreak2, listItems[5]);
-	}
-
-	if (listItems.length >= 6) {
-		const lineBreak1 = document.createElement("br");
-		const lineBreak2 = document.createElement("br");
-		ul.insertBefore(lineBreak1, listItems[6]);
-		ul.insertBefore(lineBreak2, listItems[6]);
-	}
-
-	if (listItems.length >= 7) {
-		const lineBreak1 = document.createElement("br");
-		const lineBreak2 = document.createElement("br");
-		ul.insertBefore(lineBreak1, listItems[7]);
-		ul.insertBefore(lineBreak2, listItems[7]);
-	}
-
-	if (listItems.length >= 8) {
-		const lineBreak1 = document.createElement("br");
-		const lineBreak2 = document.createElement("br");
-		ul.insertBefore(lineBreak1, listItems[8]);
-		ul.insertBefore(lineBreak2, listItems[8]);
-	}
-
-	if (listItems.length >= 9) {
-		const lineBreak1 = document.createElement("br");
-		const lineBreak2 = document.createElement("br");
-		ul.insertBefore(lineBreak1, listItems[9]);
-		ul.insertBefore(lineBreak2, listItems[9]);
-	}
-
-	if (listItems.length >= 10) {
-		const lineBreak1 = document.createElement("br");
-		const lineBreak2 = document.createElement("br");
-		ul.insertBefore(lineBreak1, listItems[10]);
-		ul.insertBefore(lineBreak2, listItems[10]);
-	}
-
-	if (listItems.length >= 11) {
-		const lineBreak1 = document.createElement("br");
-		const lineBreak2 = document.createElement("br");
-		ul.insertBefore(lineBreak1, listItems[11]);
-		ul.insertBefore(lineBreak2, listItems[11]);
-	}
-
-	if (listItems.length >= 12) {
-		const lineBreak1 = document.createElement("br");
-		const lineBreak2 = document.createElement("br");
-		const lineBreak3 = document.createElement("br");
-		ul.insertBefore(lineBreak2, listItems[12]);
-		ul.insertBefore(lineBreak3, listItems[12]);
-	}
-});*/
-
 document.addEventListener("DOMContentLoaded", function() {
+	/**
+	 * A constant that stores the CSS selector for the form element.
+	 * This selector is used to identify and access the form element with the id "give-form-23148-wrap".
+	 *
+	 * @constant {string}
+	 */
 	const FORM_SELECTOR = "#give-form-23148-wrap";
 	const LIST_SELECTOR = "#give-donation-level-button-wrap";
 

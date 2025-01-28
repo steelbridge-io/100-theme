@@ -1,5 +1,12 @@
 /* Use this file to add styles to the theme when compiling .scss is not an option. CSS added here will be added to .scss eventualy */
 
+.error404 .site-container .site-inner {
+	height: 90vh;
+	padding-top: 5em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
 [data-custom-class='body'], [data-custom-class='body'] * {
 	background: transparent !important;
 }
@@ -181,7 +188,11 @@ p.mobile-edge-margin.has-very-dark-gray-color.has-text-color{
 
 @media (min-width: 1200px) {}
 
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+	#searchsubmit {
+		margin-top: 1em;
+	}
+}
 
 @media (max-width: 767.98px) {
 	#custom_html-8 .textwidget img {
@@ -192,6 +203,9 @@ p.mobile-edge-margin.has-very-dark-gray-color.has-text-color{
 		margin: 0 auto;
 		display: block;
 		max-width: 100% !important;
+	}
+	.error404 .site-container .site-inner h1 {
+		font-size: 2.5rem;
 	}
 }
 
